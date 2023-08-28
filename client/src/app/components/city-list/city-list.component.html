@@ -1,0 +1,14 @@
+
+<form [formGroup]="submitForm" (ngSubmit)="addCity()">
+  <table>
+    <tr>
+      <td>City:</td>
+      <td><input type="text" size="30" formControlName="city"></td>
+      <td><button>Add</button></td>
+    </tr>
+  </table>
+</form>
+
+<ul>
+  <li *ngFor="let city of cities"><a [routerLink]="['/weather/', city]">{{city}}</a></li>
+</ul>
